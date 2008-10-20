@@ -3,7 +3,7 @@
 %define release %mkrel 2
 
 Name:           %{name} 
-Summary:        PosteRazor cuts a raster image into pieces which can afterwards be printed out and assembled to a poster
+Summary:        PosteRazor cuts a raster image into pieces
 Version:        %{version} 
 Release:        %{release} 
 Source0:        %{name}-%{version}-Source.tar.bz2
@@ -23,10 +23,11 @@ Requires:       libfreeimage3
 Requires:	libxpm4
 
 %description
-PosteRazor takes a raster image. The resulting poster is saved as a multipage 
-PDF document. An easy to use, wizard like user interface guides through 5 steps.
-PosteRazor is available as a Windows, an OSX and a Linux version. It is an open
-source, GNU licensed project which is hosted on SourceForge.net.
+PosteRazor takes a raster image. The resulting poster is saved as a 
+multipage PDF document. An easy to use, wizard like user interface 
+guides through 5 steps. PosteRazor is available as a Windows, an OSX
+and a Linux version. It is an open source, GNU licensed project which
+is hosted on SourceForge.net.
 
 %prep
 rm -rf $RPM_BUILD_ROOT
