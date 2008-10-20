@@ -1,6 +1,6 @@
 %define name PosteRazor
 %define version 1.5
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name:           %{name} 
 Summary:        PosteRazor cuts a raster image into pieces
@@ -17,6 +17,7 @@ BuildRequires:	cmake
 BuildRequires:	freeimage-devel
 BuildRequires:	xpm-devel
 BuildRequires:	fltk-devel
+BuildRequires:	libxft-devel
 License:        GPLv3+
 Requires:       libfreeimage3
 #Requires:	libfltk1.1
