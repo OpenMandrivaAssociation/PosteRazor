@@ -17,6 +17,7 @@ BuildRequires:	cmake
 BuildRequires:	freeimage-devel
 BuildRequires:	xpm-devel
 BuildRequires:	fltk-devel
+BuildRequires:	xft2-devel
 License:        GPLv3+
 
 %description
