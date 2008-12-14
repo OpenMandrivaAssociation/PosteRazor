@@ -1,6 +1,6 @@
 %define name PosteRazor
 %define version 1.5
-%define release %mkrel 3
+%define release %mkrel 4
 
 Name:           %{name} 
 Summary:        PosteRazor cuts a raster image into pieces
@@ -17,11 +17,7 @@ BuildRequires:	cmake
 BuildRequires:	freeimage-devel
 BuildRequires:	xpm-devel
 BuildRequires:	fltk-devel
-BuildRequires:	libxft-devel
 License:        GPLv3+
-Requires:       libfreeimage3
-#Requires:	libfltk1.1
-Requires:	libxpm4
 
 %description
 PosteRazor takes a raster image. The resulting poster is saved as a 
@@ -31,7 +27,6 @@ and a Linux version. It is an open source, GNU licensed project which
 is hosted on SourceForge.net.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
 %setup -q -n %{name}-%{version}
 rm -rf packaging
 %patch0
@@ -39,20 +34,18 @@ rm -rf packaging
 
 %build
 cd src
-cmake .
+%cmake
 %make
 
 %install
-mkdir -p $RPM_BUILD_ROOT/%{_bindir} $RPM_BUILD_ROOT/%{_docdir}/%name
-mv src/PosteRazor $RPM_BUILD_ROOT/%{_bindir}
-mv CHANGES LICENSE README $RPM_BUILD_ROOT/%{_docdir}/%name
+rm -fr %buildroot
+cd src/build
+install -D -m755 PosteRazor $RPM_BUILD_ROOT/%{_bindir}/PosteRazor
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(0755,root,root)
+%defattr(-,root,root)
+%doc CHANGES LICENSE README
 %{_bindir}/*
-%{_docdir}/%name/*
-#%{doc} CHANGES LICENSE README
-
