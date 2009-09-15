@@ -1,6 +1,6 @@
 %define name PosteRazor
 %define version 1.5
-%define release %mkrel 4
+%define release %mkrel 5
 
 Name:           %{name} 
 Summary:        PosteRazor cuts a raster image into pieces
