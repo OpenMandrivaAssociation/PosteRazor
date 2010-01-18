@@ -1,6 +1,6 @@
 %define name PosteRazor
 %define version 1.5
-%define release %mkrel 5
+%define release %mkrel 6
 
 Name:           %{name} 
 Summary:        PosteRazor cuts a raster image into pieces
@@ -9,6 +9,7 @@ Release:        %{release}
 Source0:        %{name}-%{version}-Source.tar.bz2
 Patch0:		FlPosteRazorHelpDialog.patch
 Patch1:		FlPosteRazorSpinner.patch
+Patch2:		PosteRazor-1.5-mdv-fix-str-fmt.patch
 
 URL:            http://posterazor.sourceforge.net 
 Group:          Graphics 
@@ -32,6 +33,7 @@ is hosted on SourceForge.net.
 rm -rf packaging
 %patch0
 %patch1
+%patch2 -p1 -b .strfmt
 
 %build
 cd src
