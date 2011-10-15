@@ -6,7 +6,7 @@ Name:           %{name}
 Summary:        PosteRazor cuts a raster image into pieces
 Version:        %{version} 
 Release:        %{release} 
-Source0:        %{name}-%{version}-Source.tar.bz2
+Source0:        %{name}-%{version}-Source.tar.gz
 Patch0:		FlPosteRazorHelpDialog.patch
 Patch1:		FlPosteRazorSpinner.patch
 Patch2:		PosteRazor-1.5-mdv-fix-str-fmt.patch
