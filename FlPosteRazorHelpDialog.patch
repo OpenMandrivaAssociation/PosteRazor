@@ -1,0 +1,12 @@
+*** src/FlPosteRazorHelpDialog.cpp_orig	2008-05-16 21:02:56.000000000 +0200
+--- src/FlPosteRazorHelpDialog.cpp	2008-10-17 18:48:15.000000000 +0200
+***************
+*** 22,27 ****
+--- 22,28 ----
+  
+  #include "FlPosteRazorHelpDialog.h"
+  #include "Translations.h"
++ #include <string.h>
+  
+  #if defined (WIN32)
+    #include <Shellapi.h>

@@ -1,0 +1,12 @@
+*** src/FlPosteRazorSpinner.cpp_orig	2008-05-16 21:02:56.000000000 +0200
+--- src/FlPosteRazorSpinner.cpp	2008-10-17 18:46:48.000000000 +0200
+***************
+*** 24,29 ****
+--- 24,30 ----
+  #include <FL/Fl_Input.H>
+  #include <FL/Fl_Repeat_Button.H>
+  #include <stdio.h>
++ #include <stdlib.h>
+  #include <math.h>
+  #ifndef WIN32
+  #include <iostream>
