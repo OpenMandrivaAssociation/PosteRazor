@@ -11,7 +11,7 @@ Patch0:		FlPosteRazorHelpDialog.patch
 Patch1:		FlPosteRazorSpinner.patch
 Patch2:		PosteRazor-1.5-mdv-fix-str-fmt.patch
 
-URL:            http://posterazor.sourceforge.net 
+URL:            https://posterazor.sourceforge.net 
 Group:          Graphics 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	cmake
